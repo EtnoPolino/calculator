@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root{
+    /* background */
+    --mainBackground : hsl(222, 26%, 31%); /*main background*/
+    --keypadBackground : hsl(223, 31%, 20%); /* toggle background, keypad background */
+    --screenBackground : hsl(224, 36%, 15%);
+
+    /* keys */
+    --keyBackground : hsl(225, 21%, 49%);
+    --keyShadow : hsl(224, 28%, 35%);
+    --red : hsl(6, 63%, 50%);
+    --darkRed : hsl(6, 70%, 34%);
+    --lightGrayOrange : hsl(30, 25%, 89%);
+    --grayishOrange : hsl(28, 16%, 65%);
+
+    /* text */
+    --darkGrayishBlue : hsl(221, 14%, 31%);
+    --white : hsl(0, 0, 100%);
+
+    --fontSize : 32px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    font-size: var(--fontSize);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainBackground);
+}
+
+
+main .wrapper-visualisation-top,
+main .wrapper-visualisation-bottom{
+    background-color: var(--screenBackground);
+    height: 60px;
+    width: 400px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+main .wrapper-visualisation-top{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+main .wrapper-visualisation-bottom{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 20px;
+}
+
+main .keypad{
+    padding: 20px;
+    background: var(--keypadBackground);
+    border-radius: 10px;
+    
+}
+
+main .keypad .top-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.style,
+.style-bottom{
+    border-radius : 6px;
+    text-align : center;
+    padding : 5px;
+    color : var(--darkGrayishBlue);
+    cursor : pointer;
+    box-shadow : 3px 2px 2px var(--keyShadow);
+}
+
+.style.second-style,
+.style-bottom.second-style{
+    text-transform:uppercase;
+    background-color: var(--keyBackground);
+    color: white;
+}
+
+main .keypad .bottom-buttons{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.style-bottom.third-style{
+    background-color: var(--red);
+    color: white;
+}
