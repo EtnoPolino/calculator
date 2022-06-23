@@ -1,10 +1,10 @@
 const buttons = document.querySelectorAll('button');
-const displayInput = document.querySelectorAll('#display-input');
-const displayResult = document.querySelectorAll('#display-result');
+const displayInput = document.getElementById('display-input');
+const displayResult = document.getElementById('display-result');
 
-
-console.log(displayInput.textContent)
-console.log(displayResult.textContent)
+/*
+console.log(displayInput.innerText)
+console.log(displayResult.innerText) */
 /*-------------------------------------------------------------------------------------------------------------
                                     AddeventListeners
 -------------------------------------------------------------------------------------------------------------*/
@@ -19,7 +19,35 @@ buttons.forEach((button) =>{
 -------------------------------------------------------------------------------------------------------------*/
 
 function writeCalculus(e){
-   /* console.log(displayInput.innerText); */
+   switch(e.target.innerText){
+    case 'DEL' : 
+    displayInput.innerText = displayInput.innerText.substring(0, displayInput.innerText.length - 1);
+        break;
+    case '+' : 
+        console.log('+');
+        break;  
+    case '-' : 
+        console.log('-');
+        break;
+    case 'x' : 
+        console.log('x');
+        break;
+    case '/' : 
+        console.log('/');
+        break;
+    case '.' : 
+        console.log('.');
+        break;      
+    case 'RESET' :
+        displayInput.innerText = '';
+        displayResult.innerText = '';
+        break;
+    case '=' :
+        console.log('=');
+        break;
+    default:
+        displayInput.innerText += e.target.innerText;
 
+   } // fin swtich
    
 } // fun de la function write
