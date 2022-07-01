@@ -105,3 +105,8 @@ main .keypad .bottom-buttons{
     background-color: var(--red);
     color: white;
 }
+
+/*** usless class ***/
+.active{
+    opacity: 1;
+}
