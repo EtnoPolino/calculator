@@ -200,10 +200,13 @@ function writeNumberKeyboard(evt){
            }
         });
     }else if(evt.key === 'Backspace'){
+        evt.preventDefault();
         deleteNumber();
     }else if(evt.key === 'Delete'){
+        evt.preventDefault();
         resetNumber();
     }else if(evt.key === 'Enter'){
+        evt.preventDefault();
         equalize();
     }
 } /* fin de fonction */
